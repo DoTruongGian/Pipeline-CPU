@@ -1,0 +1,116 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 19:03:58  April 08, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		main_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC9E6F35C7
+set_global_assignment -name TOP_LEVEL_ENTITY main
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:03:58  APRIL 08, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name SYSTEMVERILOG_FILE first_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Second_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE third_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fourth_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Address_Generator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Data_Memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE hazard_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Instruction_Fetch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Instruction_Memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PCPlus4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PCTarget.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Register_File.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux5.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4.sv
+set_global_assignment -name TEXT_FILE instruction.txt
+set_global_assignment -name SYSTEMVERILOG_FILE main.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2_alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sign_extend.sv
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_global_assignment -name SYSTEMVERILOG_FILE Decompress.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2to1.sv
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
+set_global_assignment -name SYSTEMVERILOG_FILE mux5to1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LS_sel.sv
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform20.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform21.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform22.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform23.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform24.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform25.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform26.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform27.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform28.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform29.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform30.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform31.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform32.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform34.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform35.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform36.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,15 @@
+module Decompress(
+    input logic[31:0] inputA,
+    output logic[31:0] outputData,
+    output logic select
+);
+
+logic [31:0] extend;
+assign extend = {16'b0, inputA [15:0]};
+// Compare inputA with extendedInputB
+assign select = (inputA == extend);
+
+// Output data based on selection
+assign outputData = outputSelection ? inputA : 32'b0;
+
+endmodule

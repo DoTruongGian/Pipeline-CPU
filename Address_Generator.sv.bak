@@ -1,0 +1,31 @@
+module Address_Generator (
+    input logic        rst,
+    input logic        clk,
+    input logic        PCSrcE,
+    input logic        StallF,
+    input logic [31:0] PCPlus4F,
+    input logic [31:0] PCTargetE,
+    output logic [31:0] PCF
+);
+
+    logic [31:0] PCFbar;
+
+    // Combinational block: blocking assignment (=) is appropriate
+    always @* begin
+        PCFbar = PCSrcE ? PCTargetE : PCPlus4F;
+    end
+
+    // Sequential block: non-blocking assignment (<=) is appropriate
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            PCF <= 32'h0;
+        end
+        else if (StallF) begin
+            // No change in PCF
+        end
+        else begin
+            PCF <= PCFbar;
+        end
+    end 
+
+endmodule

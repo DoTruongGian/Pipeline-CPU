@@ -1,0 +1,12 @@
+module LS_sel (
+	input logic [2:0] funct3M,
+	input logic [31:0] ReadData,
+	output logic [2:0] select,
+	output logic [31:0] lw,
+	output logic [31:0] lb,
+	output logic [31:0] lh,
+	output logic [31:0] lbu,
+	output logic [31:0] lhu
+);
+assign 
+assign lw =
