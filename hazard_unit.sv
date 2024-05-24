@@ -10,6 +10,7 @@ module hazard_unit (
     input logic        RegWriteM,
     input logic        RegWriteW,
     input logic        PCSrcE,
+	 input logic		  flag_PC,
     output logic       StallF,
     output logic       StallD,
     output logic       FlushE,
@@ -18,6 +19,7 @@ module hazard_unit (
     output logic [1:0] ForwardBE
 );
     logic lwStall;
+	 
 
     always_comb begin
         if (((Rs1E == RdM) && RegWriteM) && (Rs1E != 0)) begin
@@ -47,7 +49,7 @@ module hazard_unit (
         lwStall = (ResultSrcE[0] & ((Rs1D == RdE) | (Rs2D == RdE)));
         StallD = lwStall;
         FlushE = lwStall | PCSrcE;
-        StallF = lwStall;
+        StallF = lwStall ;
         FlushD = PCSrcE;
     end
 endmodule

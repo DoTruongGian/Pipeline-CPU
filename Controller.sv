@@ -18,8 +18,8 @@ module Controller (
 
 	 
 	 
-    logic [16:0] checker;
-    assign      checker = {{OP},{funct3},{funct77}};
+    logic [16:0] checkerr;
+    assign      checkerr = {{OP},{funct3},{funct77}};
     logic [1:0]   ALUOp;
     always_comb begin
         case (OP)
@@ -114,7 +114,7 @@ module Controller (
 
     always_comb begin
 
-        case (checker)
+        case (checkerr)
             17'b01100110000000000: ALUControlD = 5'b00000;
             17'b01100110000100000: ALUControlD = 5'b00001;
             17'b01100110000000001: ALUControlD = 5'b00010;

@@ -113,4 +113,19 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform32.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform34.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform35.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform36.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform39.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform40.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform41.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform42.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform43.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform44.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform45.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform46.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform47.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform48.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform49.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform50.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform51.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform52.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform53.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

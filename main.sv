@@ -14,11 +14,13 @@ module main (
     output logic [31:0] checkx4,
     output logic [31:0] checkx5,
     output logic [31:0] checkx6,
-    output logic [31:0] DM0,
+    output logic [31:0] DM0,temp_inss,PCFF,
+    output logic flag_2comm,flag_PCC,
 	 output logic [2:0] test,
     output logic [31:0] instruction
 );
-	 logic [31:0] outputData0, outputData1, compress_wire;
+
+	 logic [31:0]  PCF_co,compress_wire;
 	 logic [31:0] lw,lb, lbu, lh, lhu, RD;
 	 logic [2:0] funct3M, funct3M_sel, select_ls;
     logic [31:0] PCF;
@@ -26,7 +28,6 @@ module main (
     logic [4:0]  A1, A2, RdD, RdW, RdE, RdM, Rs1E, Rs2E, Rs1D, Rs2D;
     logic [6:0]  OP;
     logic [2:0]  funct3, funct3E;
-	 logic			select;
     logic        funct7;
     logic        WE3;
     logic        RegWriteW;
@@ -63,30 +64,29 @@ module main (
     Address_Generator i_ag (
         .rst      (rst      ),
         .clk      (clk      ),
+		  .flag_PC	(flag_PCC),
         .PCSrcE   (PCSrcE   ),
         .StallF   (StallF   ),
         .PCPlus4F (PCPlus4F ),
         .PCTargetE(PCTargetE),
         .PCF      (PCF      )
     );
-
+	 
+	 
     Instruction_Memory i_im (
-        .PCF        (PCF        ),
+        .PCF        (PCF       ),
         .instruction(compress_wire)
     );
 	 Decompress De (
+			.PCF_c(PCF),
+			.PCF_co(PCF_co),
 			.inputA(compress_wire),
-			.outputData0(outputData0),
-			.outputData1(outputData1),
-			.select(select)
+			.flag_2comm(flag_2comm),
+			.flag_PCC(flag_PCC),
+			.temp_inss(temp_inss),
+			.Decompress_o(instruction)
 	 );
-	 mux2to1 mu(
-	 .outputData0(outputData0),
-	 .outputData1(outputData1),
-	 .select(select),
-	 .InsD(instruction)
-	 );
-	 
+
 
     first_register i_1 (
         .clk        (clk        ),
@@ -94,7 +94,7 @@ module main (
         .StallD     (StallD     ),
         .FlushD     (FlushD     ),
         .instruction(instruction),
-        .PCF        (PCF        ),
+        .PCF        (PCF    ),
         .PCPlus4F   (PCPlus4F   ),
         .instrD     (instrD     ),
         .PCD        (PCD        ),
@@ -102,7 +102,7 @@ module main (
     );
 
     PCPlus4 i_pcp4 (
-        .PCF     (PCF     ),
+        .PCF     (PCF_co   ),
         .PCPlus4F(PCPlus4F)
     );
 
@@ -253,7 +253,7 @@ module main (
 	 
 	 
 	 );
-	 mux5to1 (
+	 mux5to1 muxx (
 	 .RD(RD),
 	 .select(select_ls),
 	 .lw(lw),
@@ -316,6 +316,7 @@ module main (
         .RegWriteM (RegWriteM ),
         .RegWriteW (RegWriteW ),
         .PCSrcE    (PCSrcE    ),
+		  .flag_PC	 (flag_PCC),
         .StallF    (StallF    ),
         .StallD    (StallD    ),
         .FlushE    (FlushE    ),
@@ -341,4 +342,5 @@ module main (
     );
 	 
 	assign test = funct3M; 
+	assign PCFF = PCF;
 endmodule

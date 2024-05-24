@@ -1,82 +1,78 @@
 module Decompress(
-    input logic[31:0] inputA,
-    output logic[31:0] outputData1,
-    output logic[31:0] outputData0,
-    output logic select
+    input logic [31:0] inputA, PCF_c,
+    output logic [31:0] Decompress_o,
+    output logic flag_PCC,
+    output logic [31:0] temp_inss, PCF_co,
+    output logic flag_2comm
 );
 
-    logic [31:0] extend;
-    logic [1:0] op;
+    reg [31:0] compress_o;
+    reg [15:0] register_instruction;
+    logic [1:0] compress_h, compress_l;
+    reg flag_un = 1'b0, flag_PC = 1'b0;
+    logic [31:0] Decompress_o_temp;
 
-    assign op = inputA[1:0];
-    assign extend = {16'b0, inputA[15:0]};
-    assign outputData0 = inputA;
-    assign select = (inputA == extend);
+    assign compress_h = inputA[17:16];
+    assign compress_l = inputA[1:0];
 
     always_comb begin
-        case (op)
-            2'b00: begin
-                outputData1 = {7'b0, inputA[6:2], inputA[11:7], 3'b0, inputA[11:7], 7'b0110011};
+        if (flag_PC == 1'b1) begin
+            compress_o = {16'b0, register_instruction};
+            flag_PC = 1'b0;
+				PCF_co = PCF_c ;
+        end else if (compress_l == 2'b11) begin
+            if (!flag_un) begin
+                compress_o = inputA;
+					 PCF_co = PCF_c ;
+            end else begin
+                if (compress_h == 2'b11) begin
+                    compress_o = {inputA[15:0], register_instruction};
+                    register_instruction = inputA[31:16];
+						  PCF_co = PCF_c ;
+                end
+                if (compress_h != 2'b11) begin
+                    compress_o = {inputA[15:0], register_instruction};
+                    register_instruction = inputA[31:16];
+                    PCF_co = PCF_c - 4;
+						  flag_PC = 1'b1;
+                    flag_un = 1'b0;
+                end
             end
-            // Add cases for other values of op if needed
+        end else if (compress_l != 2'b11) begin
+            if (compress_h != 2'b11 && flag_PC == 1'b0) begin
+                compress_o = {16'b0, inputA[15:0]};
+                register_instruction = inputA[31:16];
+					 flag_PC = 1'b1;
+                PCF_co = PCF_c - 4;
+            end
+            if (compress_h == 2'b11 && flag_un == 1'b0) begin
+                compress_o = {16'b0, inputA[15:0]};
+                register_instruction = inputA[31:16];
+                flag_un = 1'b1;
+					 PCF_co = PCF_c ;
+            end else if (flag_un) begin
+                compress_o = {inputA[15:0], register_instruction};
+                register_instruction = inputA[31:16];
+					 PCF_co = PCF_c ;
+            end
+        end
+    end
+
+    always @(*) begin
+        case (compress_o[1:0])
+            2'b00: begin
+                Decompress_o_temp = {7'b0, compress_o[6:2], compress_o[11:7], 3'b0, compress_o[11:7], 7'b0110011};
+            end
+            // Add cases for other values of compress_o[1:0] if needed
             default: begin
-                outputData1 = '0; // Default output if op doesn't match any case
+                Decompress_o_temp = compress_o; // Default output if op doesn't match any case
             end
         endcase
     end
+
+    assign Decompress_o = Decompress_o_temp;
+    assign flag_2comm = flag_un;
+    assign temp_inss = inputA;
+    assign flag_PCC = flag_PC;
+
 endmodule
-
-
-
-	reg [15:0] register_instruction;
-	reg [1:0] compress_h, compress_l;
-	reg flag_2com, flag_com, flag_coml;
-	
-	always_comb begin 
-		if (compress_h != 2'b11 && compress_l != 2'b11) begin
-			if(flag_2com == 1'b1) begin
-			flag_2com = 1'b1;
-			register_instruction = inputA[15:0];
-			compress_o = {16'b0,inputA[31:16]};
-			//PC-4 
-			end
-			else begin
-			flag_2com = 1'b0;
-			compress_o = {16'b0,register_instruction};
-			end
-		end
-		
-		else if (compress_h != 2'b11 && compress_l == 2'b11) begin
-			register_instruction = inputA[15:0];
-			compress_o = {16'b0,inputA[31:16]};
-			flag_com = 1'b1;
-		end
-		
-		else if (compress_h == 2'b11 && compress_l == 2'b11) begin 
-			if (flag_com = 1'b1) begin
-				register_instruction = inputA[15:0];
-				compress_o = {register_intruction, inputA [31:16]};
-				
-			end	
-			else begin
-				compress_o = inputA;
-			
-			end
-			
-		end
-		
-		else if (compress_h == 2'b11 && compress_l != 2'b11) begin
-			if (flag_coml == 1'b0) begin
-				register_instruction = inputA[15:0];
-				compress_o = {register_intruction, inputA [31:16]};
-				flag_coml = 1'b1;	
-				//PC-4
-			end
-			if (flag_coml == 1'b1) begin 
-				flag_coml = 1'b0;
-				flag_com  = 1'b0;
-				compress_o = {16'b0, register_instruction};
-			end
-		end
-	
-	end
