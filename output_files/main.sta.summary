@@ -2,148 +2,180 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'Address_Generator:i_ag|PCF[4]'
-Slack : -11.739
-TNS   : -108.990
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -87.593
+TNS   : -133301.468
 
 Type  : Slow 1100mV 85C Model Setup 'Address_Generator:i_ag|PCF[2]'
-Slack : -11.443
-TNS   : -98.096
+Slack : -11.508
+TNS   : -119.606
 
-Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -11.006
-TNS   : -59128.869
+Type  : Slow 1100mV 85C Model Setup 'rst'
+Slack : -2.663
+TNS   : -7.762
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -1.388
-TNS   : -4.061
+Slack : 0.329
+TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'Address_Generator:i_ag|PCF[4]'
-Slack : 1.033
+Type  : Slow 1100mV 85C Model Hold 'rst'
+Slack : 0.796
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'Address_Generator:i_ag|PCF[2]'
-Slack : 1.082
+Slack : 1.158
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[4]'
-Slack : -0.820
-TNS   : -33.863
+Type  : Slow 1100mV 85C Model Recovery 'clk'
+Slack : -0.107
+TNS   : -102.246
+
+Type  : Slow 1100mV 85C Model Removal 'clk'
+Slack : -0.072
+TNS   : -45.123
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[2]'
-Slack : -0.596
-TNS   : -19.475
+Slack : -1.804
+TNS   : -120.803
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -6907.663
+TNS   : -7623.430
 
-Type  : Slow 1100mV 0C Model Setup 'Address_Generator:i_ag|PCF[4]'
-Slack : -11.611
-TNS   : -108.977
-
-Type  : Slow 1100mV 0C Model Setup 'Address_Generator:i_ag|PCF[2]'
-Slack : -11.361
-TNS   : -98.473
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : 0.375
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -11.269
-TNS   : -57408.541
+Slack : -91.202
+TNS   : -128723.376
+
+Type  : Slow 1100mV 0C Model Setup 'Address_Generator:i_ag|PCF[2]'
+Slack : -11.275
+TNS   : -118.637
+
+Type  : Slow 1100mV 0C Model Setup 'rst'
+Slack : -2.802
+TNS   : -8.078
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -1.623
-TNS   : -5.997
+Slack : 0.118
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'Address_Generator:i_ag|PCF[2]'
 Slack : 0.640
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'Address_Generator:i_ag|PCF[4]'
-Slack : 0.949
+Type  : Slow 1100mV 0C Model Hold 'rst'
+Slack : 0.839
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[4]'
-Slack : -0.865
-TNS   : -39.697
+Type  : Slow 1100mV 0C Model Recovery 'clk'
+Slack : -0.085
+TNS   : -71.421
+
+Type  : Slow 1100mV 0C Model Removal 'clk'
+Slack : -0.023
+TNS   : -0.105
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[2]'
-Slack : -0.685
-TNS   : -23.957
+Slack : -1.682
+TNS   : -126.512
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -7141.369
+TNS   : -7867.410
 
-Type  : Fast 1100mV 85C Model Setup 'Address_Generator:i_ag|PCF[4]'
-Slack : -6.266
-TNS   : -53.034
-
-Type  : Fast 1100mV 85C Model Setup 'Address_Generator:i_ag|PCF[2]'
-Slack : -6.155
-TNS   : -48.572
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : 0.266
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -4.804
-TNS   : -27241.292
+Slack : -42.078
+TNS   : -72932.282
+
+Type  : Fast 1100mV 85C Model Setup 'Address_Generator:i_ag|PCF[2]'
+Slack : -6.191
+TNS   : -60.803
+
+Type  : Fast 1100mV 85C Model Setup 'rst'
+Slack : -0.711
+TNS   : -1.867
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -0.581
-TNS   : -0.790
+Slack : 0.135
+TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'Address_Generator:i_ag|PCF[4]'
-Slack : 0.656
+Type  : Fast 1100mV 85C Model Hold 'rst'
+Slack : 0.214
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'Address_Generator:i_ag|PCF[2]'
-Slack : 0.678
+Slack : 1.023
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[4]'
-Slack : -0.093
-TNS   : -0.740
+Type  : Fast 1100mV 85C Model Recovery 'clk'
+Slack : -0.102
+TNS   : -110.750
+
+Type  : Fast 1100mV 85C Model Removal 'clk'
+Slack : -0.095
+TNS   : -91.911
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[2]'
+Slack : -0.576
+TNS   : -18.896
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.078
-TNS   : -618.502
+TNS   : -677.252
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[2]'
-Slack : 0.048
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'Address_Generator:i_ag|PCF[4]'
-Slack : -5.658
-TNS   : -48.673
-
-Type  : Fast 1100mV 0C Model Setup 'Address_Generator:i_ag|PCF[2]'
-Slack : -5.559
-TNS   : -44.589
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : -0.059
+TNS   : -0.093
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -4.339
-TNS   : -23342.008
+Slack : -39.656
+TNS   : -63062.147
+
+Type  : Fast 1100mV 0C Model Setup 'Address_Generator:i_ag|PCF[2]'
+Slack : -5.560
+TNS   : -55.398
+
+Type  : Fast 1100mV 0C Model Setup 'rst'
+Slack : -0.616
+TNS   : -1.648
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.702
-TNS   : -1.756
+Slack : -0.016
+TNS   : -0.403
+
+Type  : Fast 1100mV 0C Model Hold 'rst'
+Slack : 0.211
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'Address_Generator:i_ag|PCF[2]'
-Slack : 0.566
+Slack : 0.769
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'Address_Generator:i_ag|PCF[4]'
-Slack : 0.583
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Recovery 'clk'
+Slack : -0.123
+TNS   : -140.197
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.080
-TNS   : -635.612
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[4]'
-Slack : -0.049
-TNS   : -0.167
+Type  : Fast 1100mV 0C Model Removal 'clk'
+Slack : -0.078
+TNS   : -72.100
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Address_Generator:i_ag|PCF[2]'
-Slack : 0.068
-TNS   : 0.000
+Slack : -0.450
+TNS   : -15.157
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : -0.094
+TNS   : -0.316
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.079
+TNS   : -698.859
 
 ------------------------------------------------------------

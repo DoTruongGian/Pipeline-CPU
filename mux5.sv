@@ -10,3 +10,4 @@ module mux5 #
 );
     assign SrcAE = ForwardAE[1] ? ALUResultM : (ForwardAE[0] ? ResultW : RD1E);
 endmodule
+

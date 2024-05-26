@@ -14,7 +14,7 @@ module Address_Generator (
     // Combinational block: always_comb is appropriate for combinational logic
 	 
     always_comb begin
-        PCFbar = (PCSrcE == 1'b1)  ? PCTargetE : PCF + 4;
+        PCFbar = (PCSrcE == 1'b1)  ? PCTargetE : PCPlus4F;
 		  
     end
 	 

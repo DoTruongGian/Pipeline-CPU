@@ -14,7 +14,7 @@ module main (
     output logic [31:0] checkx4,
     output logic [31:0] checkx5,
     output logic [31:0] checkx6,
-    output logic [31:0] DM0,temp_inss,PCFF,
+    output logic [31:0] DM0,temp_inss,PCFF,PCF_coo,PCPlus4FF,
     output logic flag_2comm,flag_PCC,
 	 output logic [2:0] test,
     output logic [31:0] instruction
@@ -340,7 +340,8 @@ module main (
         .ForwardBE (ForwardBE ),
         .WriteDataE(WriteDataE)
     );
-	 
+	 assign PCF_coo = PCF_co;
 	assign test = funct3M; 
 	assign PCFF = PCF;
+	assign PCPlus4FF = PCPlus4F;
 endmodule

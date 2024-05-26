@@ -15,7 +15,7 @@ module main_tb;
     logic flag_2comm;
 	 logic [31:0] temp_inss;
 	 logic flag_PCC;
-	 logic [31:0] PCFF;
+	 logic [31:0] PCFF,PCF_coo,PCPlus4FF;
     logic [31:0] instruction;
 
     // Instantiate the module under test (MUT)
@@ -30,6 +30,8 @@ module main_tb;
         .checkx6(checkx6),
         .DM0(DM0),
 		  .PCFF(PCFF),
+		  .PCPlus4FF(PCPlus4FF),
+		  .PCF_coo(PCF_coo),
 	.flag_2comm(flag_2comm),
 		  .flag_PCC(flag_PCC),
 		  .temp_inss(temp_inss),
@@ -75,4 +77,3 @@ module main_tb;
         $dumpvars(0, main_tb);
     end
 endmodule
-

@@ -10,7 +10,7 @@ module Register_File (
     output logic [31:0] RD2,
     output logic [31:0] checkx1,  //it is to see x1 of register file (you can ignore it if your simulator allows you to see full RF)
     output logic [31:0] checkx2,
-    output logic [31:32] checkx3,
+    output logic [31:0] checkx3,
     output logic [31:0] checkx4,
     output logic [31:0] checkx5,
     output logic [31:0] checkx6
@@ -47,4 +47,3 @@ module Register_File (
         checkx6 = Registers[6];
     end
 endmodule
-

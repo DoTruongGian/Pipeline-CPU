@@ -1,5 +1,5 @@
 Flow report for main
-Fri May 24 04:22:20 2024
+Sat May 25 13:06:15 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,24 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Fri May 24 04:22:20 2024      ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; main                                        ;
-; Top-level Entity Name       ; main                                        ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CGXFC9E6F35C7                              ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Sat May 25 13:06:15 2024       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; main                                        ;
+; Top-level Entity Name           ; main                                        ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CGXFC9E6F35C7                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 6,166 / 113,560 ( 5 % )                     ;
+; Total registers                 ; 9750                                        ;
+; Total pins                      ; 359 / 616 ( 58 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 12,492,800 ( 0 % )                      ;
+; Total DSP Blocks                ; 2 / 342 ( < 1 % )                           ;
+; Total HSSI RX PCSs              ; 0 / 12 ( 0 % )                              ;
+; Total HSSI PMA RX Deserializers ; 0 / 12 ( 0 % )                              ;
+; Total HSSI TX PCSs              ; 0 / 12 ( 0 % )                              ;
+; Total HSSI PMA TX Serializers   ; 0 / 12 ( 0 % )                              ;
+; Total PLLs                      ; 0 / 20 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/24/2024 04:22:11 ;
+; Start date & time ; 05/24/2024 16:32:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -73,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1095286147323.171649933008508          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1095286147323.171654315422224          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -90,8 +95,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4776 MB             ; 00:00:23                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:28     ; 1.9                     ; 4961 MB             ; 00:00:50                           ;
+; Fitter               ; 00:06:22     ; 1.2                     ; 7249 MB             ; 00:13:31                           ;
+; Assembler            ; 00:00:17     ; 1.0                     ; 4937 MB             ; 00:00:16                           ;
+; Timing Analyzer      ; 00:00:36     ; 2.7                     ; 5504 MB             ; 00:01:23                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4807 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4826 MB             ; 00:00:05                           ;
+; Total                ; 00:07:50     ; --                      ; --                  ; 00:16:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,6 +111,11 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; LAPTOP-0GLKOJEA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-0GLKOJEA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-0GLKOJEA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-0GLKOJEA  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-0GLKOJEA  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-0GLKOJEA  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -108,6 +123,11 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off main -c main
+quartus_fit --read_settings_files=off --write_settings_files=off main -c main
+quartus_asm --read_settings_files=off --write_settings_files=off main -c main
+quartus_sta main -c main
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off main -c main --vector_source=C:/intelFPGA_lite/18.1/pipe_line/Waveform55.vwf --testbench_file=C:/intelFPGA_lite/18.1/pipe_line/simulation/qsim/Waveform55.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/18.1/pipe_line/simulation/qsim/ main -c main
 
 
 
