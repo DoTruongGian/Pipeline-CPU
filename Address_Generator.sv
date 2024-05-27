@@ -26,7 +26,7 @@ module Address_Generator (
         if (rst) begin
             PCF <= 32'h0;
         end
-     else if (StallF) begin
+     else if (StallF | flag_PC) begin
            PCF <= PCF;
         end
         else  begin

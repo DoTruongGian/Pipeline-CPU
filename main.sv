@@ -39,7 +39,6 @@ module main (
     logic        ZeroE;
     logic        RegWriteE;
     logic        MemWriteE, JumpE, BranchE, ALUSrcE, PCSrcE;
-
     logic [24:0] Imm;
     logic [6:0]  funct77;
     logic [31:0] ResultW, RD1, RD2;
@@ -78,8 +77,8 @@ module main (
         .instruction(compress_wire)
     );
 	 Decompress De (
-			.PCF_c(PCF),
-			.PCF_co(PCF_co),
+			.clk(clk),
+			.rst(rst),
 			.inputA(compress_wire),
 			.flag_2comm(flag_2comm),
 			.flag_PCC(flag_PCC),
@@ -102,7 +101,7 @@ module main (
     );
 
     PCPlus4 i_pcp4 (
-        .PCF     (PCF_co   ),
+        .PCF     (PCF   ),
         .PCPlus4F(PCPlus4F)
     );
 

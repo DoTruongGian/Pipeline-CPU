@@ -32,7 +32,7 @@ module main_tb;
 		  .PCFF(PCFF),
 		  .PCPlus4FF(PCPlus4FF),
 		  .PCF_coo(PCF_coo),
-	.flag_2comm(flag_2comm),
+			.flag_2comm(flag_2comm),
 		  .flag_PCC(flag_PCC),
 		  .temp_inss(temp_inss),
         .test(test),
