@@ -68,6 +68,27 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	hazard_unit
 
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/alu.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/alu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/mux.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/mux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/Data_Memory.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/Data_Memory.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Data_Memory
+
+Top level modules:
+	Data_Memory
+
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/main_tb.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/main_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module main_tb
@@ -82,33 +103,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	Instruction_Memory
 
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/Data_Memory.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/Data_Memory.sv
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/PCPlus4.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/PCPlus4.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Data_Memory
+-- Compiling module PCPlus4
 
 Top level modules:
-	Data_Memory
-
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/mux.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/mux.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux
-
-Top level modules:
-	mux
-
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/alu.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/alu.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module alu
-
-Top level modules:
-	alu
-
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/mux5to1.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/mux5to1.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux5to1
-
-Top level modules:
-	mux5to1
+	PCPlus4
 
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/PCMinus4.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/PCMinus4.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -117,12 +117,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	PCMinus4
 
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/PCPlus4.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/PCPlus4.sv
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/mux5to1.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/mux5to1.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module PCPlus4
+-- Compiling module mux5to1
 
 Top level modules:
-	PCPlus4
+	mux5to1
 
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/Register_File.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/Register_File.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -131,19 +131,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	Register_File
 
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/main.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/main.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module main
-
-Top level modules:
-	main
-
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/mux3.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/mux3.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module mux3
 
 Top level modules:
 	mux3
+
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/main.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/main.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module main
+
+Top level modules:
+	main
 
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/mux5.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/mux5.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -152,13 +152,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	mux5
 
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/Second_register.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/Second_register.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Second_register
-
-Top level modules:
-	Second_register
-
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/sign_extend.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/sign_extend.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module sign_extend
@@ -166,12 +159,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	sign_extend
 
-} {} {}} C:/intelFPGA_lite/18.1/pipe_line/LS_sel.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/LS_sel.sv
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/Second_register.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/Second_register.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module LS_sel
+-- Compiling module Second_register
 
 Top level modules:
-	LS_sel
+	Second_register
 
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/PCTarget.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/PCTarget.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -179,6 +172,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	PCTarget
+
+} {} {}} C:/intelFPGA_lite/18.1/pipe_line/LS_sel.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/LS_sel.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LS_sel
+
+Top level modules:
+	LS_sel
 
 } {} {}} C:/intelFPGA_lite/18.1/pipe_line/Instruction_Fetch.sv {1 {vlog -work work -sv -stats=none C:/intelFPGA_lite/18.1/pipe_line/Instruction_Fetch.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

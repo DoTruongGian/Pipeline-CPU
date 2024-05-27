@@ -27,7 +27,6 @@ module Decompress(
         end else if (compress_l == 2'b11) begin
             if (!flag_un) begin
                 compress_o <= inputA;
-					 count = count + 5'b00001;
             end else begin
                 if (compress_h == 2'b11) begin
                     compress_o <= {inputA[15:0], register_instruction};
@@ -58,16 +57,15 @@ module Decompress(
                     register_instruction <= inputA[31:16];
 						  flag_PC <= 1'b1;
                     flag_un <= 1'b0;
-
 				end
         end
     end
 
     always @(*) begin
 	 
-	 if (count == 5'b00010) begin
+	/* if (count == 5'b00010) begin
 			Decompress_o_temp = 32'h00000013;
-	 end else begin
+	 end else*/ begin
         case (compress_o[1:0])
             2'b00: begin
                 case (compress_o[15:13])
