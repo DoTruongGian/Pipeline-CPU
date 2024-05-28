@@ -8,10 +8,9 @@ module Decompress(
 );
 
     reg [31:0] compress_o;
-    reg [15:0] register_instruction, cur_ins, past_ins;
+    reg [15:0] register_instruction;
     logic [1:0] compress_h, compress_l;
     reg flag_un = 1'b0, flag_PC = 1'b0 ;
-	 reg [4:0]count = 5'b0;
     logic [31:0] Decompress_o_temp;
 	
     assign compress_h = inputA[17:16];
@@ -106,11 +105,7 @@ module Decompress(
                     end
                     3'b110: begin
                         // C.BEQZ
-                        Decompress_o_temp = { compress_o[12], compress_o[6:5], compress_o[2], 5'b00000, compress_o[11:10], compress_o[4:3], compress_o[7], compress_o[12:10], compress_o[9:7], 3'b000, 5'b00000, 7'b1100011 };
-                    end
-                    3'b111: begin
-                        // C.BNEZ
-                        Decompress_o_temp = { compress_o[12], compress_o[6:5], compress_o[2], 5'b00000, compress_o[11:10], compress_o[4:3], compress_o[7], compress_o[12:10], compress_o[9:7], 3'b001, 5'b00000, 7'b1100011 };
+                        Decompress_o_temp = { {4{compress_o[12]}}, compress_o[6:5], compress_o[2], 5'b00000, 2'b01, compress_o[9:7], 2'b00, compress_o[13], compress_o[11:10], compress_o[4:3], compress_o[12], 7'b1100011 };
                     end
                     default: begin
                         Decompress_o_temp = compress_o; // Default output if op doesn't match any case

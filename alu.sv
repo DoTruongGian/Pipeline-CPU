@@ -46,6 +46,7 @@ module alu(
             5'b01110: ALU_Result = (SrcAE > SrcBE) ? 32'd1 : 32'd0;
             5'b01111: ALU_Result = (SrcAE == SrcBE) ? 32'd1 : 32'd0;
             5'b10000: ALU_Result = SrcBE;
+            5'b10001: ALU_Result = (SrcAE < SrcBE) ? 32'd1 : 32'd0;				
             default: ALU_Result = SrcAE + SrcBE;
         endcase
     end

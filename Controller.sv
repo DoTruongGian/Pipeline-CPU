@@ -87,15 +87,16 @@ module Controller (
                 ImmSrcD    = 3'b011;
                 JumpD      = 1;
             end
-            /*7'b0110111:begin //U-type
-                BranchD <= 0;
-                WE3 <= 1;
-                ImmSrc <= 3'b100;
-                ALUSrc <= 1;
-                WE <= 0;
-                ResultSrc <= 0;
-                ALUOp <= 2'b00;
-            end  */  
+            7'b0110111:begin //U-type
+				    MemWriteD  = 0;
+					 BranchD    = 0;
+					 ALUSrcD    = 1'b1;
+                RegWriteD  = 1;
+					 ImmSrcD    = 3'b100;
+					 ALUSrcD    = 1;
+					 ALUOp      = 2'b00;
+					 
+            end    
                 
             default: begin
                 BranchD    = 0;
@@ -125,6 +126,7 @@ module Controller (
             17'b01100111000000000: ALUControlD = 5'b01010;
             17'b01100110010000000: ALUControlD = 5'b00100; //sll,logical shift left
             17'b01100111010000000: ALUControlD = 5'b00101; //srl,logical shift right
+				17'b01100110100000000: ALUControlD = 5'b10001;
             17'b0010011000xxxxxxx: ALUControlD = 5'b00000;
             17'b11000110001111111: ALUControlD = 5'b00001; //beq
             17'b1100011001xxxxxxx: ALUControlD = 5'b00001;
